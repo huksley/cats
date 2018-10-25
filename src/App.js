@@ -20,10 +20,10 @@ class App extends Component {
           <p class="nav">
             <div>
               <div>
-                <RouteLink to="/">Home</RouteLink>
+                <RouteLink to={`${process.env.PUBLIC_URL}/`}>Home</RouteLink>
               </div>
               <div>
-                <RouteLink to="/facts">Facts</RouteLink>
+                <RouteLink to={`${process.env.PUBLIC_URL}/facts`}>Facts</RouteLink>
               </div>
             </div>
           </p>
@@ -34,14 +34,14 @@ class App extends Component {
               <Switch>
                 <Route
                   exact
-                  path="/"
+                  path={`${process.env.PUBLIC_URL}/`}
                   render={() => {
                     return <Home />;
                   }}
                 />
 
                 <Route
-                  path="/facts"
+                  path={`${process.env.PUBLIC_URL}/facts`}
                   render={() => {
                     return <Facts />;
                   }}
