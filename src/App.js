@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
-import logo from './logo.jpg';
-import './App.css';
-import { Route, Link as RouteLink, Redirect, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import Facts from './components/Facts';
+import React, { Component } from "react";
+import logo from "./logo.jpg";
+import "./App.css";
+import { Route, Link as RouteLink, Redirect, Switch } from "react-router-dom";
+import Home from "./components/Home";
+import Facts from "./components/Facts";
+
+import { ListGroup, ListGroupItem, Container, Row, Col } from "reactstrap";
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -11,26 +13,43 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p class="nav">
-          <div>
-            <div><RouteLink to="/">Home</RouteLink></div>
-            <div><RouteLink to="/facts">Facts</RouteLink></div>
-          </div>
-        </p>
-        <div style={{width: '50%', margin: 'auto'}}>
-        <Switch>
-              <Route exact path="/" render={() => {
-                  return <Home />
-              }} />
-
-              <Route path="/facts" render={() => {
-                  return <Facts />
-              }} />
-            </Switch>
+        <Container className="App">
+        <Row style={{width: '60%', align: 'left', margin: 'auto'}}>
+          <Col>
+          <img src={logo} className="App-logo" alt="logo" />
+          <p class="nav">
+            <div>
+              <div>
+                <RouteLink to="/">Home</RouteLink>
+              </div>
+              <div>
+                <RouteLink to="/facts">Facts</RouteLink>
+              </div>
             </div>
-      </div>
+          </p>
+          </Col>
+          </Row>
+          <Row style={{width: '60%', align: 'left', margin: 'auto'}}>
+            <Col>
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  render={() => {
+                    return <Home />;
+                  }}
+                />
+
+                <Route
+                  path="/facts"
+                  render={() => {
+                    return <Facts />;
+                  }}
+                />
+              </Switch>
+            </Col>
+          </Row>
+        </Container>
       </Router>
     );
   }
