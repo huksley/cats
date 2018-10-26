@@ -16,6 +16,11 @@ class App extends Component {
         <Container className="App">
         <Row style={{width: '60%', align: 'left', margin: 'auto'}}>
           <Col>
+            <h1>Cats.ai</h1>
+          </Col>
+        </Row>
+        <Row style={{width: '60%', align: 'left', margin: 'auto'}}>
+          <Col>
           <RouteLink to={`${process.env.PUBLIC_URL}/`}>
             <img src={logo} className="App-logo" alt="logo" />
           </RouteLink>
