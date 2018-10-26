@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link as RouteLink } from "react-router-dom";
 
+import factsImg from  '../facts.jpg';
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +13,9 @@ export default class Home extends Component {
       <div className="container-fluid">
         <h1>Welcome to Cats.ai, our showcase of feline wisdom.</h1>
 
+        <img src={factsImg} style={{width: '14em', float: 'left'}} />
+
+        <div style={{marginLeft: '15em'}}>
         <h2>Facts</h2>
         <p>
           <ul>
@@ -59,6 +64,8 @@ export default class Home extends Component {
             </a>
           </li>
         </ul>
+
+        </div>
       </div>
     );
   }
