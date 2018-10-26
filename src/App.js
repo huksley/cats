@@ -14,29 +14,31 @@ class App extends Component {
     return (
       <Router basename="#/">
         <Container className="App">
-        <Row style={{width: '60%', align: 'left', margin: 'auto'}}>
-          <Col>
-            <h1>Cats.ai</h1>
-          </Col>
-        </Row>
-        <Row style={{width: '60%', align: 'left', margin: 'auto'}}>
-          <Col>
-          <RouteLink to={`${process.env.PUBLIC_URL}/`}>
-            <img src={logo} className="App-logo" alt="logo" />
-          </RouteLink>
-          <p class="nav">
-            <div>
-              <div>
-                <RouteLink to={`${process.env.PUBLIC_URL}/`}>Home</RouteLink>
-              </div>
-              <div>
-                <RouteLink to={`${process.env.PUBLIC_URL}/facts`}>Facts</RouteLink>
-              </div>
-            </div>
-          </p>
-          </Col>
+          <Row className="header">
+            <Col>
+              <RouteLink to={`${process.env.PUBLIC_URL}/`}>
+                <img src={logo} className="App-logo" alt="logo" />
+              </RouteLink>
+              <Col className="nav">
+                <div>
+                  <div>
+                    <RouteLink to={`${process.env.PUBLIC_URL}/`}>
+                      Home
+                    </RouteLink>
+                  </div>
+                  <div>
+                    <RouteLink to={`${process.env.PUBLIC_URL}/facts`}>
+                      Facts
+                    </RouteLink>
+                  </div>
+                </div>
+              </Col>
+              <Col className="site-name">
+                <h1>Cats.ai</h1>
+              </Col>
+            </Col>
           </Row>
-          <Row style={{width: '60%', align: 'left', margin: 'auto'}}>
+          <Row>
             <Col>
               <Switch>
                 <Route
