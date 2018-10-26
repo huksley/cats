@@ -15,27 +15,23 @@ class App extends Component {
       <Router basename="#/">
         <Container className="App">
           <Row className="header">
-            <Col>
-              <RouteLink to={`${process.env.PUBLIC_URL}/`}>
-                <img src={logo} className="App-logo" alt="logo" />
-              </RouteLink>
-              <Col className="nav">
-                <div>
-                  <div>
-                    <RouteLink to={`${process.env.PUBLIC_URL}/`}>
-                      Home
-                    </RouteLink>
-                  </div>
-                  <div>
-                    <RouteLink to={`${process.env.PUBLIC_URL}/facts`}>
-                      Facts
-                    </RouteLink>
-                  </div>
-                </div>
-              </Col>
-              <Col className="site-name">
-                <h1>Cats.ai</h1>
-              </Col>
+            <RouteLink to={`${process.env.PUBLIC_URL}/`}>
+              <img src={logo} className="App-logo" alt="logo" />
+            </RouteLink>
+            <Col className="site-name">
+              <h1>Cats.ai</h1>
+            </Col>
+            <Col className="nav">
+              <div>
+                <RouteLink to={`${process.env.PUBLIC_URL}/`}>
+                  Home
+                </RouteLink>
+              </div>
+              <div>
+                <RouteLink to={`${process.env.PUBLIC_URL}/facts`}>
+                  Facts
+                </RouteLink>
+              </div>
             </Col>
           </Row>
           <Row>
