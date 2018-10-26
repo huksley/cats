@@ -12,11 +12,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="#/">
         <Container className="App">
         <Row style={{width: '60%', align: 'left', margin: 'auto'}}>
           <Col>
-          <img src={logo} className="App-logo" alt="logo" />
+          <RouteLink to={`${process.env.PUBLIC_URL}/`}>
+            <img src={logo} className="App-logo" alt="logo" />
+          </RouteLink>
           <p class="nav">
             <div>
               <div>

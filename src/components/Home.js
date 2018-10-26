@@ -16,7 +16,7 @@ export default class Home extends Component {
       Welcome to Cats.ai, our showcase of feline wisdom. This amazing website helps you to know that your cats might be more intelligent then you think. 
       See the amazing facts that validate our claim:
       &nbsp;
-      <RouteLink to="/facts">Facts</RouteLink>
+      <RouteLink to={`${process.env.PUBLIC_URL}/facts`}>Facts</RouteLink>
       </p>
 
       </div>
