@@ -12,7 +12,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 class App extends Component {
   render() {
     return (
-      <Router basename="#/">
+      <Router basename={`${process.env.PUBLIC_URL}/#/`}>
         <Container className="App">
           <Row className="header">
             <RouteLink to={`${process.env.PUBLIC_URL}/`}>
